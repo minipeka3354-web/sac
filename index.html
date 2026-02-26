@@ -1,10 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Б Клас</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        nav {
+            background-color: #2a5298;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #1e3c72;
+        }
+
+        .students {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .student-card {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .student-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #2a5298;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #163d7a;
+        }
+    </style>
 </head>
 <body>
+
+<header>
+    <h1>Вітаємо на сайті 8-Б класу 🎓</h1>
+    <p>Найкращий клас у школі!</p>
+</header>
+
+<nav>
+    <a href="#about">Про нас</a>
+    <a href="#students">Учні</a>
+    <a href="#events">Події</a>
+</nav>
+
+<section id="about">
+    <h2>Про наш клас</h2>
+    <p>
+        8-Б клас — це дружній, активний та творчий колектив.
+        Ми любимо навчатися, брати участь у конкурсах та організовувати шкільні заходи.
+    </p>
+</section>
+
+<section id="students">
+    <h2>Наші учні</h2>
+    <div class="students">
+        <div class="student-card">Андрій</div>
+        <div class="student-card">Марія</div>
+        <div class="student-card">Олександр</div>
+        <div class="student-card">Софія</div>
+        <div class="student-card">Максим</div>
+        <div class="student-card">Анастасія</div>
+    </div>
+</section>
+
+<section id="events">
+    <h2>Наші події</h2>
+    <p>📚 Олімпіада з математики</p>
+    <p>🎭 Шкільний концерт</p>
+    <p>⚽ Турнір з футболу</p>
+    <br>
+    <button onclick="alert('8-Б клас — найкращий!')">
+        Натисни мене 🙂
+    </button>
+</section>
+
+<footer>
+    © 2026 8-Б клас | Всі права захищені
+</footer>
 
 </body>
 </html>
