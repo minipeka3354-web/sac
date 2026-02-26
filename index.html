@@ -3,59 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8-Б Клас</title>
+    <title>Наш 8-Б Клас</title>
     <style>
+        /* CSS Стилі */
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: #333;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
-            background-color: #1e3c72;
+            background: linear-gradient(135deg, var(--primary-color), #2c3e50);
             color: white;
+            padding: 2rem 0;
             text-align: center;
-            padding: 30px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         nav {
-            background-color: #2a5298;
-            padding: 10px;
+            background: #fff;
+            padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
             margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary-color);
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: var(--secondary-color);
         }
 
-        section {
-            padding: 40px 20px;
-            background-color: white;
-            margin: 20px;
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #1e3c72;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
         }
 
-        .students {
+        /* Стилі для карток учнів */
+        .students-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .student-card {
-            background-color: #f4f4f4;
+            background: #fff;
+            border: 1px solid #ddd;
             padding: 15px;
             border-radius: 8px;
             text-align: center;
@@ -63,78 +85,105 @@
         }
 
         .student-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        footer {
-            background-color: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 15px;
+        /* Стилі для розкладу */
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
         }
 
-        button {
-            background-color: #2a5298;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
         }
 
-        button:hover {
-            background-color: #163d7a;
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Вітаємо на сайті 8-Б класу 🎓</h1>
-    <p>Найкращий клас у школі!</p>
-</header>
+    <header>
+        <h1>Вітаємо на сторінці 8-Б класу!</h1>
+        <p>Найкращий клас у світі — це про нас.</p>
+    </header>
 
-<nav>
-    <a href="#about">Про нас</a>
-    <a href="#students">Учні</a>
-    <a href="#events">Події</a>
-</nav>
+    <nav>
+        <a href="#about">Про нас</a>
+        <a href="#students">Учні</a>
+        <a href="#schedule">Розклад</a>
+    </nav>
 
-<section id="about">
-    <h2>Про наш клас</h2>
-    <p>
-        8-Б клас — це дружній, активний та творчий колектив.
-        Ми любимо навчатися, брати участь у конкурсах та організовувати шкільні заходи.
-    </p>
-</section>
+    <div class="container">
+        <section id="about">
+            <h2>Про наш клас</h2>
+            <p>Ми — дружний та креативний 8-Б. Наш класний керівник — <strong>Прізвище Ім'я По батькові</strong>. Ми любимо подорожувати, займатися спортом та разом дізнаватися щось нове кожного дня!</p>
+        </section>
 
-<section id="students">
-    <h2>Наші учні</h2>
-    <div class="students">
-        <div class="student-card">Андрій</div>
-        <div class="student-card">Марія</div>
-        <div class="student-card">Олександр</div>
-        <div class="student-card">Софія</div>
-        <div class="student-card">Максим</div>
-        <div class="student-card">Анастасія</div>
+        <section id="students">
+            <h2>Наші учні</h2>
+            <div class="students-grid">
+                <div class="student-card"><strong>Андрій А.</strong><br>Староста</div>
+                <div class="student-card"><strong>Марина Б.</strong><br>Активістка</div>
+                <div class="student-card"><strong>Дмитро В.</strong><br>Спортсмен</div>
+                <div class="student-card"><strong>Олена Г.</strong><br>Художниця</div>
+                <div class="student-card"><strong>Максим Д.</strong><br>Програміст</div>
+                </div>
+        </section>
+
+        <section id="schedule">
+            <h2>Розклад уроків</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Понеділок</th>
+                        <th>Вівторок</th>
+                        <th>Середа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Математика</td>
+                        <td>Фізика</td>
+                        <td>Українська мова</td>
+                    </tr>
+                    <tr>
+                        <td>Історія</td>
+                        <td>Англійська мова</td>
+                        <td>Хімія</td>
+                    </tr>
+                    <tr>
+                        <td>Література</td>
+                        <td>Фізкультура</td>
+                        <td>Біологія</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
-</section>
 
-<section id="events">
-    <h2>Наші події</h2>
-    <p>📚 Олімпіада з математики</p>
-    <p>🎭 Шкільний концерт</p>
-    <p>⚽ Турнір з футболу</p>
-    <br>
-    <button onclick="alert('8-Б клас — найкращий!')">
-        Натисни мене 🙂
-    </button>
-</section>
-
-<footer>
-    © 2026 8-Б клас | Всі права захищені
-</footer>
+    <footer>
+        <p>&copy; 2026 Сайт 8-Б класу. Створено з любов'ю.</p>
+    </footer>
 
 </body>
 </html>
